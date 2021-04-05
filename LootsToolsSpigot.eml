@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="JavaSE-14" jdk_type="JavaSDK">
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="spigot-api-1.16.5-R0.1-20210328.083735-36.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/spigot-api-1.16.5-R0.1-20210328.083735-36.jar!/"/>
+	</lib>
+	<levels>
+		<level name="com.googlecode.json-simple:json-simple:1.1.1" value="project"/>
+		<level name="org.apache.commons:commons-lang3:3.3.2" value="project"/>
+	</levels>
+</component>
