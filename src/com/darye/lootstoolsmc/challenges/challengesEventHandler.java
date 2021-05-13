@@ -9,7 +9,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
-import com.darye.lootstoolsmc.challenges.eatItem.eatItem;
+//import com.darye.lootstoolsmc.challenges.eatItem.eatItem;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ import java.util.Locale;
 
 public class challengesEventHandler implements Listener {
 
+    /*
     //eatItem Challenge
     @EventHandler
     public void canEatEvent(PlayerInteractEvent event) {
@@ -58,7 +59,7 @@ public class challengesEventHandler implements Listener {
             event.setDeathMessage(ChatColor.RED + player.getDisplayName() + " ha muerto por no comer " + eatItem.materialName);
             eatItem.eatItemDeaths.remove(player.getDisplayName());
         }
-    }
+    }*/
 
     //onTopOfBlock
     @EventHandler

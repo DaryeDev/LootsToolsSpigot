@@ -1,4 +1,5 @@
 package com.darye.lootstoolsmc.challenges.eatItem;
+/*
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -163,3 +164,4 @@ public class eatItem {
         }
     }
 }
+*/

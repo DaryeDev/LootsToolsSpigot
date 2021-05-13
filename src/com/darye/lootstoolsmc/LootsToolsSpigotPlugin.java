@@ -1,6 +1,6 @@
 package com.darye.lootstoolsmc;
 
-import com.darye.lootstoolsmc.challenges.eatItem.canEatCommand;
+//import com.darye.lootstoolsmc.challenges.eatItem.canEatCommand;
 import com.darye.lootstoolsmc.commands.CommandKit.CommandKit;
 import com.darye.lootstoolsmc.challenges.challengesEventHandler;
 import org.bukkit.Bukkit;
@@ -29,7 +29,7 @@ public class LootsToolsSpigotPlugin extends JavaPlugin implements Listener {
         config.addDefault("events", true);
         config.options().copyDefaults(true);
         // eatItem Challenge
-        this.getCommand("caneat").setExecutor(new canEatCommand());
+        //this.getCommand("caneat").setExecutor(new canEatCommand());
         this.getCommand("caneat").setTabCompleter(new canEatTabCompletion());
         this.getCommand("kit").setExecutor(new CommandKit());
         saveConfig();

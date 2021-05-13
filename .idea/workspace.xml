@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="LootsToolsSpigot:jar" />
       <artifact name="LootsToolsSpigot:jar2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17c1d91c-faca-452d-b686-86ed2f80cec9" name="Default Changelist" comment="" />
+    <list default="true" id="17c1d91c-faca-452d-b686-86ed2f80cec9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/challenges/challengesEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/challenges/challengesEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/challenges/eatItem/canEatCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/challenges/eatItem/eatItem$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/challenges/eatItem/eatItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/LootsToolsSpigot.jar" beforeDir="false" afterPath="$PROJECT_DIR$/builds/LootsToolsSpigot.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/challengesEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/challengesEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/eatItem/canEatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/eatItem/canEatCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/eatItem/eatItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/challenges/eatItem/eatItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/commandInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/commandInterpreter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +34,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -37,6 +56,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1qZ6rettmMTTbVAO9MWEaW1ggVi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +68,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/json-20210307.jar" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -129,6 +150,17 @@
       <updated>1617274966206</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

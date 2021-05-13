@@ -26,15 +26,23 @@ public class commandInterpreter {
         String user = arguments.get(1);
         String cardName = arguments.get(2);
         Plugin plugin = (Bukkit.getPluginManager().getPlugin("LootsToolsSpigot"));
+        System.out.println(arguments);
         switch (arguments.get(0)) {
             case "MINECRAFTCMD":
                 String cmd = arguments.get(3);
+                System.out.println(cmd);
+                cmd = cmd.replace("MINECRAFTCMD ", "");
+                System.out.println(cmd);
                 if (cmd.contains("%PLAYER%")){
                     for (Player onlinePlayers : Bukkit.getOnlinePlayers()) {
                         String player = onlinePlayers.getDisplayName();
                         cmd = cmd.replace("%PLAYER%", player);
+                        commandInterpreter.executeCmd(cmd);
                     }}
-                commandInterpreter.executeCmd(cmd);
+                else{
+                    commandInterpreter.executeCmd(cmd);
+                }
+
                 break;
 
             case "MINECRAFTPET":
