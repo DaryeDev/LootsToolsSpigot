@@ -1,7 +1,7 @@
 name: LootsToolsSpigot
 main: com.darye.lootstoolsmc.LootsToolsSpigotPlugin
 version: 1.0
-api-version: 1.16
+api-version: 1.17
 commands:
   caneat:
     description: Your description

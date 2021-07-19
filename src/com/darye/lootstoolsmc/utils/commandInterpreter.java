@@ -1,5 +1,6 @@
 package com.darye.lootstoolsmc.utils;
 
+import com.darye.lootstoolsmc.events.LootsToolsEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -11,6 +12,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 import org.json.simple.parser.ParseException;
 
+import com.darye.lootstoolsmc.utils.eventCaller;
+
+
 public class commandInterpreter {
     // Create a class constructor for the Main class
     public commandInterpreter() {
@@ -20,6 +24,7 @@ public class commandInterpreter {
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
     }
 
+
     public static void interpretameEstaXD(List<String> arguments){
         JSONParser parser = new JSONParser();
         String message = "";
@@ -28,6 +33,16 @@ public class commandInterpreter {
         Plugin plugin = (Bukkit.getPluginManager().getPlugin("LootsToolsSpigot"));
         System.out.println(arguments);
         switch (arguments.get(0)) {
+            case "MINECRAFTEVENT":
+                String event = arguments.get(3);
+                Bukkit.getScheduler().runTaskAsynchronously(plugin, new Runnable() {
+                    @Override
+                    public void run() {
+                        new eventCaller.callEvent(arguments);
+                    }
+                });
+                break;
+
             case "MINECRAFTCMD":
                 String cmd = arguments.get(3);
                 System.out.println(cmd);

@@ -1,21 +1,55 @@
 package com.darye.lootstoolsmc.challenges;
 
+import com.darye.lootstoolsmc.events.floorIsLavaEvent;
 import org.bukkit.*;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
-//import com.darye.lootstoolsmc.challenges.eatItem.eatItem;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import java.util.ArrayList;
-import java.util.Locale;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import static org.bukkit.Material.getMaterial;
+//import com.darye.lootstoolsmc.challenges.eatItem.eatItem;
+
 
 public class challengesEventHandler implements Listener {
+
+    public boolean eventEnabled(String eventName){
+        try (Reader reader = new FileReader("events.json")) {
+            JSONParser parser = new JSONParser();
+            JSONObject data = (JSONObject) parser.parse(reader);
+            JSONObject eventDict = (JSONObject) data.get("events");
+            JSONObject event = (JSONObject) eventDict.get(eventName);
+            return (boolean) event.get("enabled");
+
+        } catch (ParseException | IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public String getEventProp(String eventName, String eventPropName) {
+        try (Reader reader = new FileReader("events.json")) {
+            JSONParser parser = new JSONParser();
+            JSONObject data = (JSONObject) parser.parse(reader);
+            JSONObject eventDict = (JSONObject) data.get("events");
+            JSONObject floorIsLavaEvent = (JSONObject) eventDict.get(eventName);
+            return (String) floorIsLavaEvent.get(eventPropName);
+
+        } catch (ParseException | IOException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
 
     /*
     //eatItem Challenge
@@ -65,8 +99,19 @@ public class challengesEventHandler implements Listener {
     @EventHandler
     public void onPlayerMoveEvent(PlayerMoveEvent event) {
         Player player = event.getPlayer();
-        if (player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.STONE) {
-            Bukkit.broadcastMessage(player.getDisplayName() + " ha encontrado su bloque!");
+        if (eventEnabled("floorIsLava")) {
+            if (player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == getMaterial(getEventProp("floorIsLava", "block"))) {
+                player.setHealth(0);
+                Bukkit.broadcastMessage(player.getDisplayName() + " ha muerto por tocar "+ getEventProp("floorIsLava", "block") +"!");
+            }
         }
-    }
+        if (eventEnabled("findBlock")) {
+            if (player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == getMaterial(getEventProp("findBlock", "block"))) {
+
+
+                Bukkit.broadcastMessage(player.getDisplayName() + " ha encontrado "+ getEventProp("findBlock", "block") +"!");
+            }
+        }
 }
+}
+

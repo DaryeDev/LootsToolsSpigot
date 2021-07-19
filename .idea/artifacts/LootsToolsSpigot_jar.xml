@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/builds</output-path>
     <root id="archive" name="LootsToolsSpigot.jar">
       <element id="module-output" name="LootsToolsSpigot" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/spigot-api-1.16.5-R0.1-20210328.083735-36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/spigot.jar" path-in-jar="/" />
       <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
     </root>
   </artifact>

@@ -13,14 +13,17 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 import com.darye.lootstoolsmc.events.LootsToolsEvent;
 
 public class LootsToolsSpigotPlugin extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
+    public static String database;
 
 
     @Override
     public void onEnable() {
+        database = getConfig().getString("DatabaseName");
         if (config.getBoolean("testModeEnabled")) {
             config.addDefault("testMode.noJump", false);
             config.addDefault("testMode.islam", false);
