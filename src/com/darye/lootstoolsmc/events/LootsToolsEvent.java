@@ -9,70 +9,85 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
+import java.text.MessageFormat;
+import java.util.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import org.java_websocket.client.WebSocketClient;
+import org.java_websocket.drafts.Draft;
+import org.java_websocket.handshake.ServerHandshake;
 
 import com.darye.lootstoolsmc.utils.commandInterpreter;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class LootsToolsEvent {
     static Thread sent;
     static Thread receive;
     static Socket socket;
+    private static WebSocketClient cc;
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
         Plugin plugin = (Bukkit.getPluginManager().getPlugin("LootsToolsSpigot"));
-        try {
-            socket = new Socket("localhost", 47474);
-        } catch (UnknownHostException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
-        sent = new Thread(new Runnable() {
+        cc = new WebSocketClient(new URI("ws://localhost:4848")) {
 
             @Override
-            public void run() {
+            public void onMessage(String message) {
+                JSONParser parser = new JSONParser();
+                JSONObject json = new JSONObject();
                 try {
-                    BufferedReader stdIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                    while (true) {
-                        System.out.println("Trying to read...");
-                        String in = stdIn.readLine();
-                        String[] str = in.split("\\|");
-                        List<String> arguments = new ArrayList<String>();
-                        arguments = Arrays.asList(str);
-                        if (arguments.get(0).contains("MINECRAFT")) {
-                            List<String> finalArguments = arguments;
-                            Bukkit.getScheduler().runTask(plugin, () -> {
-                                commandInterpreter.interpretameEstaXD(finalArguments);
-                            });
-                        }
-//                                System.out.println(in);
-                        out.print("Try" + "\r\n");
-                        out.flush();
-                        System.out.println("Message sent");
-                    }
-
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
+                    json = (JSONObject) parser.parse(message);
+                } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
-
+                for(Iterator iterator = json.keySet().iterator(); iterator.hasNext();) {
+                    String key = (String) iterator.next();
+//                    System.out.println(key + ": " + json.get(key));
+                    if (key.startsWith("MINECRAFT")) {
+                        JSONObject finalJson = json;
+                        Bukkit.getScheduler().runTask(plugin, () -> {
+                            commandInterpreter.interpretameEstaXD(finalJson);
+                        });
+                    }
+                    if (key.equals("newEvent")) {
+                        JSONObject cardData = new JSONObject();
+                        try {
+                            cardData = (JSONObject) parser.parse(json.get(key).toString());
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        JSONObject cardDataData = new JSONObject();
+                        try {
+                            cardDataData = (JSONObject) parser.parse(cardData.get("data").toString());
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        message = MessageFormat.format("{0} ha canjeado {1}!", cardData.get("user"), cardDataData.get("cardName"));
+                        Bukkit.broadcastMessage(message);
+                    }
+                }
             }
-        });
-        sent.start();
-        try {
-            sent.join();
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
 
+            @Override
+            public void onOpen(ServerHandshake handshake) {
+                System.out.println("You are connected");
+            }
+
+            @Override
+            public void onClose(int code, String reason, boolean remote) {
+                System.out.println(
+                        "You have been disconnected from: " + getURI() + "; Code: " + code + " " + reason);
+            }
+
+            @Override
+            public void onError(Exception ex) {
+                System.out.println("Exception occurred ...\n" + ex);
+                ex.printStackTrace();
+            }
+        };
+        cc.connect();
     }
 
 }

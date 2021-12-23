@@ -9,5 +9,7 @@
 	<classpathentry kind="lib" path="lib/spigot.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.googlecode.json-simple:json-simple:1.1.1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.apache.commons:commons-lang3:3.3.2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.java-websocket:Java-WebSocket:1.5.2"/>
+	<classpathentry kind="lib" path="lib/Java-WebSocket-1.5.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

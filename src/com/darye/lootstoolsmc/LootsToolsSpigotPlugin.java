@@ -2,7 +2,7 @@ package com.darye.lootstoolsmc;
 
 //import com.darye.lootstoolsmc.challenges.eatItem.canEatCommand;
 import com.darye.lootstoolsmc.commands.CommandKit.CommandKit;
-import com.darye.lootstoolsmc.challenges.challengesEventHandler;
+//import com.darye.lootstoolsmc.challenges.challengesEventHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
@@ -15,6 +15,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 
 import com.darye.lootstoolsmc.events.LootsToolsEvent;
+
+import java.net.URISyntaxException;
 
 public class LootsToolsSpigotPlugin extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
@@ -36,7 +38,7 @@ public class LootsToolsSpigotPlugin extends JavaPlugin implements Listener {
         this.getCommand("caneat").setTabCompleter(new canEatTabCompletion());
         this.getCommand("kit").setExecutor(new CommandKit());
         saveConfig();
-        getServer().getPluginManager().registerEvents(new challengesEventHandler(), this);
+        //getServer().getPluginManager().registerEvents(new challengesEventHandler(), this);
 
         System.out.println("¡LootsToolsEX for Minecraft cargado!");
 
@@ -47,7 +49,11 @@ public class LootsToolsSpigotPlugin extends JavaPlugin implements Listener {
         Bukkit.getScheduler().runTaskAsynchronously(this, new Runnable() {
             @Override
             public void run() {
-                LootsToolsEvent.main(null);
+                try {
+                    LootsToolsEvent.main(null);
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
