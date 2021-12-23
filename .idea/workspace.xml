@@ -7,27 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c1d91c-faca-452d-b686-86ed2f80cec9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_maven_plugins_maven_shade_plugin_3_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_java_websocket_Java_WebSocket_1_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LootsToolsSpigot_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LootsToolsSpigot_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LootsToolsSpigot.eml" beforeDir="false" afterPath="$PROJECT_DIR$/LootsToolsSpigot.eml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/Scratch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/Scratch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/commandInterpreter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/eventCaller$callEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/utils/eventCaller$callEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/LootsToolsSpigotPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/events/LootsToolsEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/events/LootsToolsEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/commandInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/commandInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/eventCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/darye/lootstoolsmc/utils/eventCaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <list id="231e0422-403f-40fc-9537-3657ef7fea31" name="Changes by darye" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +61,7 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA&#10;JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/Java-WebSocket-1.5.2.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -166,6 +148,14 @@
       <option name="presentableId" value="Default" />
       <updated>1617274966206</updated>
     </task>
+    <task id="LOCAL-00001" summary="Pasado todo a WebSockets">
+      <created>1640222344957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640222344957</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +169,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pasado todo a WebSockets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pasado todo a WebSockets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
