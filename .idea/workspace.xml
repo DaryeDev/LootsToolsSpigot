@@ -8,8 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17c1d91c-faca-452d-b686-86ed2f80cec9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/darye/lootstoolsmc/events/LootsToolsEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds/LootsToolsSpigot.jar" beforeDir="false" />
     </list>
     <list id="231e0422-403f-40fc-9537-3657ef7fea31" name="Changes by darye" comment="" />
     <option name="SHOW_DIALOG" value="false" />
