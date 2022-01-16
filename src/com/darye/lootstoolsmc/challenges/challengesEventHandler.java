@@ -96,6 +96,7 @@ public class challengesEventHandler implements Listener {
     }*/
 
     //onTopOfBlock
+    /*
     @EventHandler
     public void onPlayerMoveEvent(PlayerMoveEvent event) {
         Player player = event.getPlayer();
@@ -112,6 +113,6 @@ public class challengesEventHandler implements Listener {
                 Bukkit.broadcastMessage(player.getDisplayName() + " ha encontrado "+ getEventProp("findBlock", "block") +"!");
             }
         }
-}
+}*/
 }
 
